@@ -33,7 +33,7 @@ function App() {
       const payload = { ip, cookie };
       
 
-      const response = await axios.post("http://localhost:5000/api/claim", payload);
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/claim`, payload);
 
       if (response.data.timeRemaining) {
         // If remaining time is sent by the backend
